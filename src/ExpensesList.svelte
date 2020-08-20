@@ -2,6 +2,7 @@
     import SectionTitle from './Title.svelte'
     import Expense from './Expense.svelte'
     export let expenses = [];
+    // export let removeExpense;
 </script>
 
 <style>
