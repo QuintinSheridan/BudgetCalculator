@@ -11,6 +11,7 @@
     const toggleDisplayAmount = () => displayAmount=!displayAmount
     const state = getContext('state')
     const removeExpense = state.remove
+    const setModifiedExpense = state.modify
 
     const dispatch = createEventDispatcher()
 </script>
@@ -30,7 +31,7 @@
             {/if}
     </div>
     <div class="expense-button">
-        <button class="expense-btn edit-btn">
+        <button class="expense-btn edit-btn" on:click={()=>setModifiedExpense(id)}>
             <i class="fas fa-pen"></i>
         </button>
         <button class="expense-btn delete-btn" on:click={() => removeExpense(id)}>
